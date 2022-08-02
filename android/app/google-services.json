@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "212051517894",
+    "project_id": "vkhealth-fcad7",
+    "storage_bucket": "vkhealth-fcad7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212051517894:android:2b2c96613c53e82e78d2c7",
+        "android_client_info": {
+          "package_name": "vn.bakco.vkhealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212051517894-h568f85a6ouq1ggq3jvnah7iom1c7970.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWj4s3c_Hx88FHo7fpEBg2sA74gYMuTnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212051517894-h568f85a6ouq1ggq3jvnah7iom1c7970.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

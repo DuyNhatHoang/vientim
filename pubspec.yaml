@@ -1,0 +1,73 @@
+name: vkhealth
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  # GET
+  get: 4.6.1
+  get_storage: 2.0.3
+  # DIO
+  dio: 4.0.4
+  dio_http_cache: 0.3.0
+  # FONT
+  google_fonts: 2.3.1
+  auto_size_text: 3.0.0
+  #IMAGES, SLIDERS, LAYOUTS
+  cached_network_image: 3.2.0
+  carousel_slider: 4.0.0
+  flutter_svg: 1.0.3
+  image_picker: 0.8.4+9
+  cupertino_icons: any
+  shimmer: 2.0.0
+  path_provider: ^2.0.11
+  gallery_saver: ^2.3.2
+  intl_phone_field: 3.0.1
+  dots_indicator: ^2.1.0
+  group_button: ^5.0.1
+  qr_flutter: ^4.0.0
+  otp_pin_field: ^1.0.1
+  # WEB
+  webview_flutter: 3.0.0
+  flutter_html: 3.0.0-alpha.2
+  url_launcher: 6.0.20
+  # FIREBASE
+  firebase_messaging: 11.2.6
+  cloud_firestore: 3.1.8
+  firebase_auth: 3.3.7
+  firebase_core: 1.12.0
+  firebase_storage: 10.2.7
+  # GOOGLE MAPS
+  google_maps_flutter: 2.1.1
+  map_launcher: 2.2.1+1
+  #time
+  flutter_datetime_picker: ^1.5.1
+  #System
+  file_picker: ^4.6.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+  flutter_launcher_icons: 0.9.2
+
+flutter:
+  uses-material-design: true
+  assets:
+    - config/
+    - assets/img/
+    - assets/icon/
+    - assets/locales/
+    - assets/hanhchinhvn/
+    - assets/illustration/
+

@@ -1,0 +1,11 @@
+{
+  "Số điện thoại" : "Phone number",
+  "Mật khẩu" : "Password",
+  "Số điện thoại không hợp lệ" : "Should be a valid phone",
+  "Mật khẩu lớn hơn 6 kí tự" : "Should be more than 3 characters",
+  "Đăng nhập" : "Login",
+  "Chưa có tài khoản? Đăng kí" : "You don't have an account? Login",
+  "Đăng kí" : "Register",
+  "Nhập lại mật khẩu" : "Comfirm password" ,
+  "Thông tin tài khoản" : "User information"
+}
