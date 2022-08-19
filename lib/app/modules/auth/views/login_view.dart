@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:vkhealth/app/modules/auth/controllers/auth_controller.dart';
 import 'package:vkhealth/app/modules/global_widgets/text_field_widget.dart';
 import 'package:vkhealth/app/routes/app_routes.dart';
+import 'package:vkhealth/common/app_constant.dart';
 import 'package:vkhealth/common/helper.dart';
 
 import '../../global_widgets/buttons/block_button_widget.dart';
@@ -152,6 +153,13 @@ class LoginView extends GetView<AuthController> {
                           ),
                         ],
                       ).paddingSymmetric(vertical: 0),
+                      Center(
+                        child: Text(
+                          AppConstants.version,
+                          style: Get.textTheme.headline6.merge(
+                              const TextStyle(color: Colors.blue)),
+                        ) ,
+                      ),
                     ],
                   );
                 }

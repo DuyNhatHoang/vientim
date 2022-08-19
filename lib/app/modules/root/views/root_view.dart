@@ -10,7 +10,7 @@ class RootView extends GetView<RootController> {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context); 
+    SizeConfig().init(context);
     return Obx((){
       return Scaffold(
         body: controller.currentPage,
@@ -25,7 +25,7 @@ class RootView extends GetView<RootController> {
             CustomBottomNavigationItem(
               icon: Icons.home_outlined,
               label: "Trang chủ".tr,
-              color: Colors.black
+              color: Colors.black,
             ),
             CustomBottomNavigationItem(
                 icon: Icons.notifications_sharp,
@@ -47,5 +47,5 @@ class RootView extends GetView<RootController> {
       );
     });
   }
-  
+
 }

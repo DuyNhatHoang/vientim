@@ -11,6 +11,7 @@ import 'package:vkhealth/app/modules/global_widgets/buttons/radio_group/src/radi
 import 'package:vkhealth/app/modules/global_widgets/circular_loading_widget.dart';
 import 'package:vkhealth/common/ui.dart';
 
+import '../../../../common/app_constant.dart';
 import '../../../../common/size_config.dart';
 import '../../../routes/app_routes.dart';
 import '../../global_widgets/calendar/widget/my_calendar.dart';
@@ -63,6 +64,13 @@ class BookingView extends GetView<BookingController> {
                 return getCurrentWidget(
                     controller.currentDotIndex.value.toInt(), context);
               }),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Container(
+                  margin: const EdgeInsets.only(right: 10),
+                  child: Text(AppConstants.version, style: const TextStyle(color: Colors.blue, fontSize: 16),),
+                ),
+              )
             ],
           )),
     );

@@ -82,7 +82,6 @@ class AuthController extends GetxController{
         currentUser.value.dateExpired = user.dateExpired;
         await authService.changeUser(user);
         authService.user.value.auth = true;
-        print("lolol1 ${currentUser.value.auth}");
         await Get.toNamed(Routes.ROOT, arguments: 0);
       } catch(e){
         Get.showSnackbar(Ui.RemindSnackBar(message: "Tài khoản hoặc mật khẩu không đúng"));

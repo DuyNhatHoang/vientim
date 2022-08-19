@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:vkhealth/app/modules/auth/controllers/auth_controller.dart';
 import 'package:vkhealth/app/modules/global_widgets/text_field_widget.dart';
 
+import '../../../../common/app_constant.dart';
 import '../../global_widgets/buttons/block_button_widget.dart';
 
 class ForgetPassView extends GetView<AuthController> {
@@ -110,6 +111,13 @@ class ForgetPassView extends GetView<AuthController> {
                     TextStyle(color: Get.theme.primaryColor)),
               ),
             ).paddingSymmetric(vertical: 10, horizontal: 20),
+            Center(
+              child: Text(
+                AppConstants.version,
+                style: Get.textTheme.headline6.merge(
+                    const TextStyle(color: Colors.blue)),
+              ) ,
+            ),
           ],
         ),
       );}),

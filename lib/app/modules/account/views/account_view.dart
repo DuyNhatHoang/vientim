@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vkhealth/app/routes/app_routes.dart';
 
+import '../../../../common/app_constant.dart';
 import '../../../../common/helper.dart';
 import '../../../../common/size_config.dart';
 import '../../../../common/ui.dart';
@@ -19,34 +20,45 @@ class AccountView extends GetView<AccountController>{
     return WillPopScope(
       onWillPop: Helper().onWillPop,
       child: Scaffold(
-        body: ListView(
-          primary: true,
+        body: Stack(
           children: [
-            const SizedBox(height: 30,),
-            Obx(
-                (){
-                  if(controller.profile.value.gender == null || controller.userInfo.value.data == null) return Container();
-                  if(controller.profile.value.phoneNumber != null && controller.userInfo.value.data.userInfo.fullName != null){
-                    return UserAvatarVer(phone:  controller.userInfo.value.data.userInfo.phoneNumber,
-                      name: controller.profile.value.fullname == controller.profile.value.username ? controller.userInfo.value.data.userInfo.fullName:controller.profile.value.fullname, showDetail: true,);
+            ListView(
+              primary: true,
+              children: [
+                const SizedBox(height: 30,),
+                Obx(
+                        (){
+                      if(controller.profile.value.gender == null || controller.userInfo.value.data == null) return Container();
+                      if(controller.profile.value.phoneNumber != null && controller.userInfo.value.data.userInfo.fullName != null){
+                        return UserAvatarVer(phone:  controller.userInfo.value.data.userInfo.phoneNumber,
+                          name: controller.profile.value.fullname == controller.profile.value.username ? controller.userInfo.value.data.userInfo.fullName:controller.profile.value.fullname, showDetail: true,);
+                      }
+                      return Container();
+                    }
+                ),
+                horiFunc("assets/icon/user_with_bg.png", "Thông tin cá nhân", ontap: () async {
+                  if(controller.profile.value.fullname == null){
+                    Get.showSnackbar(Ui.RemindSnackBar(message: "Lấy thông tin thất bại"));
+                  } else {
+                    Get.toNamed(Routes.USER_INFOR, arguments: controller.provinces);
                   }
-                  return Container();
-                }
+                }),
+                horiFunc("assets/icon/lock_with_bg.png", "Cài đặt mật khẩu", ontap: (){
+                  Get.toNamed(Routes.PASSWORD_SETTING);
+                } ),
+                LogOutWidget(
+                  onTap: (){
+                    controller.logout();
+                  },
+                )
+              ],
             ),
-            horiFunc("assets/icon/user_with_bg.png", "Thông tin cá nhân", ontap: () async {
-              if(controller.profile.value.fullname == null){
-                Get.showSnackbar(Ui.RemindSnackBar(message: "Lấy thông tin thất bại"));
-              } else {
-                Get.toNamed(Routes.USER_INFOR, arguments: controller.provinces);
-              }
-            }),
-            horiFunc("assets/icon/lock_with_bg.png", "Cài đặt mật khẩu", ontap: (){
-              Get.toNamed(Routes.PASSWORD_SETTING);
-            } ),
-            LogOutWidget(
-              onTap: (){
-                controller.logout();
-              },
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Container(
+                margin: const EdgeInsets.only(right: 10),
+                child: Text(AppConstants.version, style: const TextStyle(color: Colors.blue, fontSize: 16),),
+              ),
             )
           ],
         ),

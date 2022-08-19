@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:vkhealth/common/size_config.dart';
 
 class HomeFunctionCard extends StatelessWidget {
   final String title;
@@ -10,27 +11,30 @@ class HomeFunctionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Column(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-                color: bgColor,
-                borderRadius: BorderRadius.circular(20)
-            ),
-            padding: const EdgeInsets.all(13),
-            child: Image.asset(
-              image,
-              height: 40,
-              color: Colors.white,
-            ),
-          ).paddingOnly(bottom: 10),
-           Text(
-            title,
-            style: const TextStyle(fontSize: 16, color: Colors.black54),
-          )
-        ],
+    return SizedBox(
+      width: SizeConfig.screenWidth * 0.4,
+      child: InkWell(
+        onTap: onTap,
+        child: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  color: bgColor,
+                  borderRadius: BorderRadius.circular(20)
+              ),
+              padding: const EdgeInsets.all(13),
+              child: Image.asset(
+                image,
+                height: 40,
+                color: Colors.white,
+              ),
+            ).paddingOnly(bottom: 10),
+            Text(
+              title,
+              style: const TextStyle(fontSize: 16, color: Colors.black54),
+            )
+          ],
+        ),
       ),
     );
   }

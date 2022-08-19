@@ -12,7 +12,7 @@ class UserAvatarVer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> listName = name.split(" ");
-    String sName;
+    String sName = "";
     try{
       if(listName.length >=  2){
         sName = "${listName[listName.length -2].substring(0,1)}${listName[listName.length -1].substring(0,1)}";

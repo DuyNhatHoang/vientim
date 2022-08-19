@@ -47,7 +47,7 @@ class SettingsService extends GetxService{
           secondary: Ui.parseColor("#1A75FF"),
         ),
         textTheme: GoogleFonts.getTextTheme(
-          'Crimson Pro',
+          'Roboto',
           TextTheme(
             headline6: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w700, color: Ui.parseColor(setting.value.mainColor), height: 1.2),
             headline5: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w700, color: Ui.parseColor(setting.value.secondColor), height: 1.2),
@@ -83,7 +83,7 @@ class SettingsService extends GetxService{
           secondary: Ui.parseColor(setting.value.mainDarkColor),
         ),
         textTheme: GoogleFonts.getTextTheme(
-           'Crimson Pro',
+           'Roboto',
             TextTheme(
               headline6: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w700, color: Ui.parseColor(setting.value.mainDarkColor), height: 1.2),
               headline5: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w700, color: Ui.parseColor(setting.value.secondDarkColor), height: 1.2),

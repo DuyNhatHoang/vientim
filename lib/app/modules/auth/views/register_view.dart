@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:vkhealth/app/modules/auth/controllers/register_controller.dart';
 import 'package:vkhealth/app/modules/global_widgets/circular_loading_widget.dart';
 
+import '../../../../common/app_constant.dart';
 import '../../global_widgets/buttons/block_button_widget.dart';
 import '../../global_widgets/text_field_widget.dart';
 
@@ -308,6 +309,13 @@ class RegisterView extends GetView<RegisterController>{
                          TextStyle(color: Get.theme.primaryColor)),
                    ),
                  ).paddingSymmetric(vertical: 10, horizontal: 20),
+                 Center(
+                   child: Text(
+                     AppConstants.version,
+                     style: Get.textTheme.headline6.merge(
+                         const TextStyle(color: Colors.blue)),
+                   ) ,
+                 ),
                ],
              );
              }

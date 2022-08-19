@@ -79,7 +79,7 @@ class AllRelation {
     data['birthDate'] = dateOfBirth;
     data['insurranceCode'] = insurranceCode;
     data['insurranceDate'] = insurranceDate;
-    data['phoneNumber'] = phoneNumber;
+    data['phone'] = phoneNumber;
     data['email'] = email;
     data['vaccinationCode'] = vaccinationCode;
     data['identityCard'] = identityCard;

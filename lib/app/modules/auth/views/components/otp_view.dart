@@ -62,6 +62,7 @@ class OtpView extends GetView<AuthController> {
             onPressed: () {
               if(controller.otp.value.length < 6){
                 Get.showSnackbar(Ui.RemindSnackBar(message: "Vui lòng nhập đủ 6 ký tự".replaceAll("Exception: ", "")));
+                return;
               }
               controller.confirmOtp(context);
             },

@@ -52,14 +52,14 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
               padding: const EdgeInsets.only(left: 10, right: 10),
               margin: const EdgeInsets.only(top: 10, bottom: 10),
               alignment: Alignment.center,
-              decoration: BoxDecoration(color: widget.currentIndex == index ? color.withOpacity(0.2) : Colors.transparent, borderRadius: BorderRadius.circular(10)),
+              decoration: BoxDecoration(color: widget.currentIndex == index ? item.color.withOpacity(0.1) : Colors.transparent, borderRadius: BorderRadius.circular(10)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Icon(
                     icon,
                     size: 24,
-                    color: widget.currentIndex == index ? color : color.withOpacity(0.5),
+                    color: widget.currentIndex == index ? item.activeColor : color.withOpacity(0.5),
                   ),
                   widget.currentIndex == index
                       ? Expanded(
@@ -68,7 +68,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                             label ?? '',
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.center,
-                            style: TextStyle(color: widget.currentIndex == index ? color : color.withOpacity(0.5)),
+                            style: TextStyle(color: widget.currentIndex == index ? item.activeColor : color.withOpacity(0.5)),
                           ),
                         )
                       : Container()
@@ -86,6 +86,7 @@ class CustomBottomNavigationItem {
   final IconData icon;
   final String label;
   final Color color;
+  final Color activeColor;
 
-  CustomBottomNavigationItem({@required this.icon, @required this.label, this.color});
+  CustomBottomNavigationItem({@required this.icon, @required this.label, this.color, this.activeColor = Colors.blue});
 }

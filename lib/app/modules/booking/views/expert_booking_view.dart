@@ -8,6 +8,7 @@ import 'package:vkhealth/app/modules/booking/controllers/booking_controller.dart
 import 'package:vkhealth/app/modules/global_widgets/buttons/block_button_widget.dart';
 import 'package:vkhealth/app/modules/global_widgets/buttons/radio_group/src/radio_button_builder.dart';
 import 'package:vkhealth/app/modules/global_widgets/buttons/radio_group/src/radio_group.dart';
+import 'package:vkhealth/common/app_constant.dart';
 import 'package:vkhealth/common/ui.dart';
 
 import '../../../../common/size_config.dart';
@@ -63,6 +64,13 @@ class ExpertBookingView extends GetView<BookingController> {
                 return getCurrentWidget(
                     controller.currentDotIndex.value.toInt(), context);
               }),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Container(
+                  margin: const EdgeInsets.only(right: 10),
+                  child: Text(AppConstants.version, style: const TextStyle(color: Colors.blue, fontSize: 16),),
+                ),
+              )
             ],
           )),
     );

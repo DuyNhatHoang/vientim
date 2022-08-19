@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../common/app_constant.dart';
 import '../../../../common/size_config.dart';
 
 class BasePage extends StatelessWidget {
@@ -93,6 +94,13 @@ class BasePage extends StatelessWidget {
                 ],
               ),
             ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Container(
+                margin: const EdgeInsets.only(right: 10),
+                child: Text(AppConstants.version, style: const TextStyle(color: Colors.blue, fontSize: 16),),
+              ),
+            )
           ],
         ),
       ),  
